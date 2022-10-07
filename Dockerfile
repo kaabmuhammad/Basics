@@ -1,7 +1,7 @@
 FROM ubuntu
 
-ADD myscript.sh ./myscript.sh
+ADD mr-file-finder.sh ./mr-file-finder.sh
 
-RUN chmod +x ./myscript.sh
+RUN chmod +x ./mr-file-finder.sh
 
-ENTRYPOINT ["bash","./myscript.sh"]
+ENTRYPOINT ["bash","./mr-file-finder.sh"]

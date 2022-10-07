@@ -7,18 +7,21 @@ Repo for basics exercise
 
 ### Version String (-v)
 ```bash
-$ bash myscript.sh -v
+$ bash mr-file-finder.sh -v
 Kaab's App
 ```
 
 ### Help Text (-h)
 ```bash
-$ bash myscript.sh -h
+$ bash mr-file-finder.sh -h
 Help text
 ```
 
 
 # Tips and Tricks
-- read up on markdown format
-- add usage to README.md
-- add .gitignore
+ - read up on markdown format
+   - read up correct variable and file names
+ - add usage to README.md
+ - add .gitignore
+ - error cases, assumption knowledge, always create folders never assume they're there
+ - explain limitation / todo work / work in progress etc
