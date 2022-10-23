@@ -18,18 +18,22 @@ function print_version() {
 }
 
 function sort() {
-  SORT_DIRECTORY=$1
-  echo "Files in directory: ${SORT_DIRECTORY}"
-  # CREATE FOLDERS
-  mkdir -p sorted
-  mkdir -p sorted/docfiles
-  mkdir -p sorted/txtfiles
 
+  DIR=/data
+
+  files=$(ls $DIR | sed 's/^.*\.//' | sort -u)
   # COPY FILES
-  for dir in "${SORT_DIRECTORY}"/*; do
-      find . -name "*.docx" -type f -execdir cp -f '{}' "$(pwd)/sorted/docfiles/" \;
-      find . -name "*.txt" -type f -execdir cp -f '{}' "$(pwd)/sorted/txtfiles/" \;
-  done
+  
+  cd /data
+  echo `pwd`
+  ls -man
+  for file in $files 
+  do
+	  echo "mkdir $file"
+	  mkdir $file				# Creates the folders based on file extensions
+	  echo "*.$file $file/"
+	  cp *.$file $file/		# copy specic extension files to the folder created
+done
 }
 
 while getopts ":hvr:" opt; do
