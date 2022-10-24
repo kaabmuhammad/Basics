@@ -24,7 +24,7 @@ function sort() {
   files=$(ls $DIR | sed 's/^.*\.//' | sort -u)
   # COPY FILES
   
-  cd /data
+  cd /files
   echo `pwd`
   ls -man
   for file in $files 
